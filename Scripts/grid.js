@@ -1,14 +1,21 @@
 const client_id = "Y7pKIMKs4x48WZ6qUcDpluSfjqr12Fnjh7sEIUYP-0g";
 // const client_id = "6o4W2NGe0d1CNDWSTfieOIFcZ5OFcx2SQ_Mrm9KcBiU";
 // const client_id = "6o4W2NGe0d1CNDWSTfieOIFcZ5OFcx2SQ_Mrm9KcBiU";
-function upgradePosition  () {
-	let grid = document.querySelector("#grid-container");
-	const x = grid.scrollTop;
-	console.log(x);
+
+// Change no of columns and rows
+let columns = 5;
+
+const changeColumn = (tab) => {
+	if (tab.matches) {
+		columns = 3;
+	} else {
+		columns = 5;
+	}
 };
 
-
-// updateGridPosition();
+const tab = window.matchMedia("(max-width: 700px)");
+changeColumn(tab);
+tab.addListener(changeColumn);
 
 const fetchData = async () => {
 	const response = await fetch(
@@ -34,30 +41,8 @@ const fetchData = async () => {
 const updateGrid = (data) => {
 	let container = document.getElementById("grid-container");
 	container.innerHTML = "";
-	// alt_description: null
-	// blur_hash: "L25X_k9D8_t9x_t8fyoe4m?dMxIT"
-	// categories: []
-	// color: "#262626"
-	// created_at: "2022-01-05T21:16:36-05:00"
-	// current_user_collections: []
-	// description: "I shot this picture close to Oturere Campsite on our second night of the Tongariro Northern Circuit, \none of New Zealand's 10 great walks. It was a very windy night sleeping on very thin dust. Funny enough, the following morning we woke up under \na layer of dust inside the same tent. The picture was taken as early as 9.30pm ish with my Sony a6000 Kit lens 16-55mm f3.5."
-	// downloads: 1751
-	// exif: {make: 'SONY', model: 'ILCE-6000', name: 'SONY, ILCE-6000', exposure_time: '15', aperture: '3.5', …}
-	// height: 4000
-	// id: "P2O9V0AojnE"
-	// liked_by_user: false
-	// likes: 34
-	// links: {self: 'https://api.unsplash.com/photos/P2O9V0AojnE', html: 'https://unsplash.com/photos/P2O9V0AojnE', download: 'https://unsplash.com/photos/P2O9V0AojnE/download?i…wzMTc5NTN8MHwxfHJhbmRvbXx8fHx8fHx8fDE2NTIyNzQ0MDQ', download_location: 'https://api.unsplash.com/photos/P2O9V0AojnE/downlo…wzMTc5NTN8MHwxfHJhbmRvbXx8fHx8fHx8fDE2NTIyNzQ0MDQ'}
-	// location: {title: 'Tongariro, Manawatu-Wanganui, New Zealand', name: 'Tongariro, Manawatu-Wanganui, New Zealand', city: null, country: null, position: {…}}
-	// promoted_at: "2022-04-26T07:53:42-04:00"
-	// sponsorship: null
-	// topic_submissions: {}
-	// updated_at: "2022-05-10T14:23:48-04:00"
-	// urls: {raw: 'https://images.unsplash.com/photo-1641435354609-52…HJhbmRvbXx8fHx8fHx8fDE2NTIyNzQ0MDQ&ixlib=rb-1.2.1', full: 'https://images.unsplash.com/photo-1641435354609-52…RvbXx8fHx8fHx8fDE2NTIyNzQ0MDQ&ixlib=rb-1.2.1&q=85', regular: 'https://images.unsplash.com/photo-1641435354609-52…Hx8fHx8fDE2NTIyNzQ0MDQ&ixlib=rb-1.2.1&q=80&w=1080', small: 'https://images.unsplash.com/photo-1641435354609-52…fHx8fHx8fDE2NTIyNzQ0MDQ&ixlib=rb-1.2.1&q=80&w=400', thumb: 'https://images.unsplash.com/photo-1641435354609-52…fHx8fHx8fDE2NTIyNzQ0MDQ&ixlib=rb-1.2.1&q=80&w=200', …}
-	// user: {id: 'IYd7_LpQQIo', updated_at: '2022-05-10T16:24:37-04:00', username: '___daytripideas___', name: 'Luca Calderone', first_name: 'Luca', …}
-	// views: 211654
-	// width: 6000
-	for (let i = 0; i < 5; i++) {
+
+	for (let i = 0; i < columns; i++) {
 		let grid = document.createElement("div");
 		grid.classList.add("grid");
 		for (let j = 0; j < 5; j++) {
