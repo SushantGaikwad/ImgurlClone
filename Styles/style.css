@@ -12,7 +12,6 @@
 	background-size: cover;
 }
 
-<<<<<<< HEAD
 .navbar{
     height: 70px;
     width: 100%;
@@ -25,19 +24,6 @@
     /* justify-content: center; */
     align-items: center;
     transition: transform 250ms;
-=======
-.navbar {
-	height: 70px;
-	width: 100%;
-	border: 1px solid white;
-	/* background-color: aqua; */
-	background: transparent;
-	position: fixed;
-	display: flex;
-	z-index: 1;
-	/* justify-content: center; */
-	align-items: center;
->>>>>>> acc82a2a535c0609d14e6051d9ac873bb068471f
 }
 
 .navbarcontainer-left {
@@ -168,7 +154,6 @@
 	font-size: 16px;
 }
 
-<<<<<<< HEAD
 .tags{
     color: white;
     /* border: 1px solid red; */
@@ -186,25 +171,6 @@
 .tags > div{
     /* border: 1px solid rgb(255, 247, 0); */
     margin: 10px 0;
-=======
-.tags {
-	color: white;
-	border: 1px solid red;
-	width: 86%;
-	height: 60%;
-	top: 80px;
-	margin: 0 auto;
-	position: relative;
-	text-align: center;
-	font-size: 24px;
-	font-weight: bolder;
-	display: flex;
-	flex-direction: column;
-}
-.tags div {
-	/* border: 1px solid rgb(255, 247, 0); */
-	margin: 10px 0;
->>>>>>> acc82a2a535c0609d14e6051d9ac873bb068471f
 }
 
 
@@ -216,7 +182,6 @@
 	display: flex;
 	justify-content: space-between;
 }
-<<<<<<< HEAD
 
 .tags-option span{
     height: fit-content;
@@ -405,17 +370,3 @@
     background-color: rgb(80, 32, 123);
 
 }
-=======
-.text {
-	height: 20px;
-}
-.tags-flex {
-	display: flex;
-}
-.tags-flex div {
-	border: 1px solid white;
-	width: 200px;
-	height: 100%;
-	margin: 5px;
-}
->>>>>>> acc82a2a535c0609d14e6051d9ac873bb068471f
