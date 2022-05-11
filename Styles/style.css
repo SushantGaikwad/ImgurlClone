@@ -16,7 +16,7 @@
 .navbar{
     height: 70px;
     width: 100%;
-    border: 1px solid white;
+    /* border: 1px solid white; */
     /* background-color: aqua; */
     background: transparent;
     position: fixed;
@@ -24,6 +24,7 @@
     z-index: 1;
     /* justify-content: center; */
     align-items: center;
+    transition: transform 250ms;
 }
 
 .navbarcontainer-left{
@@ -157,7 +158,7 @@
 
 .tags{
     color: white;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     width: 86%; 
     height: 60%;
     top: 80px;
@@ -169,10 +170,11 @@
     display: flex;
     flex-direction: column;
 }
-.tags div{
+.tags > div{
     /* border: 1px solid rgb(255, 247, 0); */
     margin: 10px 0;
 }
+
 
 .tags-option {
     position: relative;
@@ -182,16 +184,191 @@
     display: flex;
     justify-content: space-between;
 }
+
+.tags-option span{
+    height: fit-content;
+}
 .text{
     height: 20px;
 }
 .tags-flex{
     display: flex;
-}
-.tags-flex div{
-    border: 1px solid white;
-    width: 200px;
     height: 100%;
-    margin: 5px;
+}
+.tags-flex > div{
+    /* border: 1px solid white; */
+    max-height: 150px;
+    width: 100px;
+    margin: 5px;    
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 250ms;
 }
 
+.tags-flex > div:hover{
+    transform: translateY(-2px);
+}
+
+.tags-flex div:nth-child(1){
+    flex-grow: 2;
+}
+.sticky{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: aqua;
+    transform: translateY(-40px);
+}
+
+.tags-after{
+    transform: translateY(-80px);
+}
+
+.newNav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transform: translateY(-1px);
+    background-image: url("https://s.imgur.com/desktop-assets/desktop-assets/homebg.e52b5cdf24f83bcd55f9f1318855f2ef.png");
+}
+
+.tag{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    /* flex-direction: column; */
+    background-image: url('../Images/01.jpg');
+    background-position: center;
+    background-size: cover;
+    align-items:flex-end;
+}
+
+.tag-title{
+    width: 100%;
+    height: 50%;
+    font-size: 14px;
+    background-color: rgb(228, 125, 87);
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: center;
+}
+
+
+.tag-title div{
+    max-height: 12px;
+    margin: 5px
+}
+.tag-posts{
+    font-size: 10px;
+    color: rgb(207, 204, 200);
+}
+
+.tags .tag:nth-child(2){
+    background-image: url('../Images/02.jpg');
+
+}
+
+.tags .tag:nth-child(2) .tag-title{
+    background-color: rgb(81, 83, 90);
+
+}
+.tags .tag:nth-child(3){
+    background-image: url('../Images/03.jpg');
+}
+.tags .tag:nth-child(3) .tag-title{
+    background-color: rgb(0, 130, 97);
+
+}
+
+.tags .tag:nth-child(4){
+    background-image: url('../Images/04.jpg');
+}
+
+.tags .tag:nth-child(4) .tag-title{
+    background-color: rgb(50, 141, 103);
+
+}
+
+.tags .tag:nth-child(5){
+    background-image: url('../Images/05.jpg');
+}
+
+.tags .tag:nth-child(5) .tag-title{
+    background-color: rgb(96, 174, 187);
+
+}
+
+.tags .tag:nth-child(6){
+    background-image: url('../Images/06.jpg');
+}
+
+.tags .tag:nth-child(6) .tag-title{
+    background-color: rgb(186, 81, 159);
+
+}
+
+.tags .tag:nth-child(7){
+    background-image: url('../Images/07.jpg');
+}
+
+.tags .tag:nth-child(7) .tag-title{
+    background-color: rgb(43, 26, 90);
+
+}
+.tags .tag:nth-child(8){
+    background-image: url('../Images/08.jpg');
+}
+
+
+.tags .tag:nth-child(8) .tag-title{
+    background-color: rgb(99, 56, 117);
+
+}
+
+.tags .tag:nth-child(9){
+    background-image: url('../Images/09.jpg');
+}
+
+.tags .tag:nth-child(9) .tag-title{
+    background-color: rgb(132, 114, 1);
+
+}
+
+.tags .tag:nth-child(10){
+    background-image: url('../Images/10.png');
+}
+
+.tags .tag:nth-child(10) .tag-title{
+    background-color: rgb(19, 45, 49);
+
+}
+
+.tags .tag:nth-child(11){
+    background-image: url('../Images/11.jpg');
+}
+
+.tags .tag:nth-child(11) .tag-title{
+    background-color: rgb(171, 128, 184);
+
+}
+
+.tags .tag:nth-child(12){
+    background-image: url('../Images/12.jpg');
+}
+
+.tags .tag:nth-child(12) .tag-title{
+    background-color: rgb(38, 59, 167);
+
+}
+
+.tags .tag:nth-child(13){
+    background-image: url('../Images/13.jpg');
+}
+
+
+.tags .tag:nth-child(13) .tag-title{
+    background-color: rgb(80, 32, 123);
+
+}
