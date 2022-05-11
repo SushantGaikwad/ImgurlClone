@@ -11,17 +11,14 @@ body {
 #grid-container .grid {
 	display: grid;
 
-	
 	position: relative;
 	z-index: 1;
 	top: -50px;
-	
 }
 
 #grid-container .grid > div {
 	display: flex;
 	flex-direction: column;
-	width: 240px;
 }
 #grid-container .image-div > img {
 	width: 100%;
@@ -76,20 +73,16 @@ body {
 	width: 15%;
 	justify-content: space-between;
 }
-.comment-svg {
-	color: #cecece;
-	cursor: pointer;
-}
-.comment-svg:hover {
-	color: #fff;
-}
+.comment-svg,
 .post-view-svg {
 	color: #cecece;
 	cursor: pointer;
 }
+.comment-svg:hover,
 .post-view-svg:hover {
 	color: #fff;
 }
+
 @media screen and (max-width: 600px) {
 	.grid {
 		grid-template-columns: 1fr 1fr 1fr;
