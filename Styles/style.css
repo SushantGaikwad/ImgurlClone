@@ -229,6 +229,7 @@
     width: 100%;
     transform: translateY(-1px);
     background-image: url("https://s.imgur.com/desktop-assets/desktop-assets/homebg.e52b5cdf24f83bcd55f9f1318855f2ef.png");
+    z-index: 2;
 }
 
 .tag{
